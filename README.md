@@ -1,4 +1,4 @@
-# My Store
+# My Shop
 
 ## Github Link
 
