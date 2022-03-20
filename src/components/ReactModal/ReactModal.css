@@ -1,0 +1,15 @@
+.modal-content{
+    width: 100% !important;
+}
+.modalImage{
+    margin-right: 20px;
+    width: 200px;
+}
+.modalTitle{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+.modal-90w{
+    max-width: 900px;
+}

@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Menubar from "./components/Menubar/Menubar";
+import AllProducts from "./components/AllProducts/AllProducts";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+  const [cart, setCart] = useState(0);
+  const addToCart = () => {
+    setCart(cart + 1);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menubar cart={cart}></Menubar>
+      <h1 className="mb-5 mainTitle">All Products</h1>
+      <AllProducts setCart={addToCart}></AllProducts>
     </div>
   );
 }

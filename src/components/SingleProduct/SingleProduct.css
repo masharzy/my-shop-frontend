@@ -1,0 +1,18 @@
+.card-img-top{
+    margin: 20px auto;
+    width: 200px;
+    height: 250px;
+}
+.card-title{
+    font-size: medium;
+}
+.card{
+    border: 0;
+    box-shadow: 0px 0px 20px 0px #d9d9d9;
+}
+.card-footer{
+    border-top: 1px solid #ddd;
+}
+.card-body{
+    padding-bottom: 5px;
+}
